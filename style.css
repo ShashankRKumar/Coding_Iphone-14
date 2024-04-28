@@ -33,3 +33,39 @@
         opacity: 1;
     }
 }
+
+@keyframes appear{
+    to{
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+}}
+
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Inter';
+    font-size: var(--size);
+
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 37/76;
+    background: black;
+    height: var(--height);
+    border-radius: var(--border-raduis);
+    box-shadow:0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale3d(1.1, 1.1, 1);
+    -webkit-animation: appear 1s var(--ease-out) forwards;
+
+}
+    
